@@ -1,0 +1,34 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %} Blog Title {% endblock %}</title>
+        {#CSS behúzása#}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('font/font.css') }}">
+            <link rel="stylesheet" href="{{ asset('style.css') }}" media="screen">
+            <link rel="stylesheet" href="{{ asset('responsive.css') }}" media="screen">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+
+    {% block header %}
+    {% endblock %}
+
+    {% block body %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+
+        {#JavaScript behúzása#}
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('js/placeholder_support_IE.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/selectnav.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('http:\code.jquery.com\jquery.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>
